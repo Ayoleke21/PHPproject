@@ -1,0 +1,25 @@
+{
+    "name": "Ayoleke21/PHPproject",
+    "description": "Your PHP Project",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+    },
+    "authors": [
+        {
+            "name": "Ayoleke",
+            "email": "olaifaayolekecm@gmail.com"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "YourNamespace\\": "src/"
+        }
+    },
+    "require-dev": {
+        // Add development-specific dependencies here (e.g., testing libraries)
+    },
+    "scripts": {
+        "test": "phpunit" // Example script for running tests
+    } 
+}

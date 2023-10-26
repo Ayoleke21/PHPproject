@@ -1,25 +1,32 @@
 {
-    "name": "Ayoleke21/PHPproject",
-    "description": "Your PHP Project",
-    "type": "project",
-    "require": {
-        "php": ">=7.4",
-    },
-    "authors": [
-        {
-            "name": "Ayoleke",
-            "email": "olaifaayolekecm@gmail.com"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "YourNamespace\\": "src/"
-        }
-    },
-    "require-dev": {
-        // Add development-specific dependencies here (e.g., testing libraries)
-    },
-    "scripts": {
-        "test": "phpunit" // Example script for running tests
-    } 
+  "name": "ayoleke/my-project",
+  "description": "Your PHP Project",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
+  },
+  "authors": [
+    {
+      "name": "Ayoleke",
+      "email": "olaifaayolekecm@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "YourNamespace\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "YourNamespace\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5",
+    "phpstan/phpstan": "^0.12",
+    "phpcs/phpcs": "^3.5"
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
 }

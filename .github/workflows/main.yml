@@ -30,4 +30,6 @@ jobs:
       run: composer install
 
     - name: Run PHP Unit Tests
-      run: composer test
+      run: |
+        composer test
+        phpunit --list-tests UnitTest.php

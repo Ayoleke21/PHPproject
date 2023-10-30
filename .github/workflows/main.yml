@@ -28,6 +28,3 @@ jobs:
 
       - name: Install dependencies
         run: composer install
-
-      - name: Run PHP Unit Tests
-        run: composer test

@@ -25,3 +25,15 @@ jobs:
           sudo mv composer.phar /usr/local/bin/composer
       - name: Install dependencies
         run: composer install
+      - name: Package Artifact
+        run: |
+          mkdir deployment
+          cp -r ./var/www/html/PHPproject deployment/
+          cd deployment
+          zip -r deployment-package.zip .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: deployment-package
+          path: ./deployment/deployment-package.zip

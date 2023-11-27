@@ -26,15 +26,9 @@ jobs:
           
       - name: Install dependencies
         run: composer install
-      - name: Package Artifact
+        
+      - name: Deploy code to document root
         run: |
-          mkdir deployment
-          cp -r ./var/www/html/PHPproject deployment/
-          cd deployment
-          zip -r deployment-package.zip .
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: deployment-package
-          path: ./deployment/deployment-package.zip
+          cd /var/www/html/PHPproject
+          git reset --hard HEAD
+          git pull origin main

@@ -30,4 +30,4 @@ jobs:
       - name: Deploy code to document root
         run: |
           cd /var/www/html/PHPproject
-          git pull origin main
+          git pull origin master

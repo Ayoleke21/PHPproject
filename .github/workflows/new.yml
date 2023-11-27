@@ -30,5 +30,4 @@ jobs:
       - name: Deploy code to document root
         run: |
           cd /var/www/html/PHPproject
-          git reset --hard HEAD
           git pull origin main

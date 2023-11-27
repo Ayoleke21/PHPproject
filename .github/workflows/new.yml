@@ -28,8 +28,6 @@ jobs:
         run: composer install
         
       - name: Deploy code to document root
-      env:
-          DEPLOYMENT_TOKEN: ${{ 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 }}
         run: |
           cd /var/www/html/PHPproject
           git pull origin main
